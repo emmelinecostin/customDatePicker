@@ -1,0 +1,252 @@
+html {
+  height: 100vh;
+  background-image: url("backgroundImg.jpeg");
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* Entire Date Container  */
+.datePickerContainer {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgba(163, 118, 113, 0.856);
+  opacity: 0.8;
+  height: 70vh;
+  width: 80%;
+  margin-top: 50px;
+  padding: 5em;
+}
+.formContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  background-color: rgb(223, 203, 201);
+  padding: 8em;
+  margin-top: 40px;
+  flex-grow: 1;
+}
+
+/* Month DropDown CSS */
+
+.monthContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  width: 30%;
+}
+
+.monthContainer label {
+  display: flex;
+  justify-content: center;
+  /* background-color: rgba(253, 253, 253, 0.932); */
+  padding: 0.5em;
+  font-size: x-large;
+  letter-spacing: 1px;
+}
+.monthContainer select {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.932);
+  padding: 1em;
+  letter-spacing: 1px;
+  font-size: large;
+  border: 1px solid grey;
+}
+
+/*  Day DropDown CSS */
+.dayContainer {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding: 1em;
+}
+.dayContainer label {
+  display: flex;
+  justify-content: center;
+  /* background-color: rgba(253, 253, 253, 0.932); */
+  padding: 0.5em;
+  font-size: x-large;
+  letter-spacing: 1px;
+}
+.dayContainer select {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(253, 253, 253, 0.932);
+  padding: 1em;
+  font-size: large;
+  border: 1px solid grey;
+}
+
+/* Year DropDown CSS  */
+
+.yearContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  width: 30%;
+}
+.yearContainer label {
+  display: flex;
+  justify-content: center;
+  /* background-color: rgba(253, 253, 253, 0.932); */
+  padding: 0.5em;
+  font-size: x-large;
+  letter-spacing: 1px;
+}
+.yearContainer input {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(253, 253, 253, 0.932);
+  padding: 1em;
+  font-size: large;
+  border: 1px solid grey;
+}
+
+/* H1 Container */
+
+.headerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 70%;
+  background-color: rgb(223, 203, 201);
+}
+
+.headerContainer h1 {
+  display: flex;
+  justify-content: center;
+}
+
+/* MEDIA QUERIES */
+
+/* tablets  */
+@media screen and (max-width: 768px) {
+  .datePickerContainer {
+    height: 60vh;
+    width: 70%;
+    margin-top: 100px;
+  }
+  .formContainer {
+    width: 50%;
+    margin-top: 10px; 
+  }
+  /* month container  */
+  .monthContainer {
+    width: 50%;
+    flex-direction: column;
+  }
+  .monthContainer label {
+    font-size: large;
+  }
+  .monthContainer select {
+    font-size: medium;
+  }
+  /* day container */
+  .dayContainer {
+    width: 50%;
+  }
+  .dayContainer label {
+    font-size: large;
+  }
+  .dayContainer select {
+    font-size: medium;
+  }
+  /* year container */
+  .yearContainer {
+    width: 50%;
+  }
+  .yearContainer label {
+    font-size: large;
+  }
+  .yearContainer input {
+    font-size: medium;
+  }
+  .headerContainer {
+    
+    padding: .75em;
+    justify-content: center;
+    align-items: center;
+  }
+  .headerContainer h1 {
+    font-size: large;
+  }
+}
+
+/* phones */
+
+@media screen and (max-width: 480px) {
+  html {
+    height: 120vh;
+  }
+  .datePickerContainer {
+    height: 60vh;
+    width: 70%;
+    margin-top: 90px;
+    z-index: -1;
+  }
+  .formContainer {
+    height: 60vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 1em;
+    margin-top: 0px;
+  }
+  /* months  */
+  .monthContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20%;
+  }
+  .monthContainer label {
+    padding: 0.5em;
+  }
+  .monthContainer select {
+    font-size: medium;
+  }
+  /* days */
+  .dayContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20%;
+  }
+  .dayContainer label {
+    padding: 1em;
+  }
+  .dayContainer select {
+    font-size: medium;
+  }
+  /* year */
+  .yearContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 10%;
+  }
+  .yearContainer label {
+    padding: 1em;
+  }
+  .yearContainer input {
+    font-size: medium;
+    padding: .5em; 
+    width: 8em;  
+  }
+  .headerContainer {
+    width: 100%;
+    padding: 1em;
+  }
+  .headerContainer h1 {
+    font-size: larger;
+  }
+}
