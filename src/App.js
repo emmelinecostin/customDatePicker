@@ -26,10 +26,10 @@ function App() {
   let todaysDate = new Date();
 
   //Calculate time difference between two dates 
-  let timeDifference = Math.floor(todaysDate.getTime() - entireDate.getTime());
+  let timeDifference = Math.floor(entireDate.getTime() - todaysDate.getTime());
 
-  //Calculate no. of days between two dates 
-  let dayDifference = Math.abs(Math.floor(timeDifference / (1000 * 3600 * 24)));
+  //Calculate no. of days between two dates & you can use Math.abs() to always get a positive integer
+  let dayDifference = Math.floor(timeDifference / (1000 * 3600 * 24));
 
   // All of our handleclicks 
   const handleMonth = (e) => {
@@ -102,7 +102,7 @@ function App() {
 
       </form>
       <div className="headerContainer">
-        <h1> {handleMonth ? month : setMonth} / {handleDay ? day : setDay} / {handleYear ? year : setYear} is {dayDifference} days from now</h1>
+        <h1> {handleMonth ? month : setMonth} / {handleDay ? day : setDay} / {handleYear ? year : setYear} is <i className="daydifference"> { dayDifference } </i> days from now</h1>
       </div>
     </div>
 

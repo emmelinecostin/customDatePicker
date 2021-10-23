@@ -126,12 +126,30 @@ html {
 .headerContainer h1 {
   display: flex;
   justify-content: center;
+  font-weight: 300; 
+}
+
+.headerContainer i {
+  padding: 0px 20px;  
 }
 
 /* MEDIA QUERIES */
 
-/* tablets  */
-@media screen and (max-width: 768px) {
+/* landscape tablets  */
+@media screen and (max-width: 1088px) {
+  .headerContainer {
+    padding: .75em;
+  }
+  .headerContainer h1 {
+    font-size: x-large;
+  }
+  .headerContainer i {
+    padding: 0px 10px; 
+  }
+}
+
+/* portrait tablets  */
+@media screen and (max-width: 842px) {
   .datePickerContainer {
     height: 60vh;
     width: 70%;
@@ -173,19 +191,35 @@ html {
     font-size: medium;
   }
   .headerContainer {
-    
     padding: .75em;
-    justify-content: center;
-    align-items: center;
   }
   .headerContainer h1 {
     font-size: large;
   }
+  .headerContainer i {
+    padding: 0px 10px; 
+  }
 }
+/* landscape phone  */
+@media screen and (max-width: 730px) {
+  .datePickerContainer {
+    margin-top: 75px; 
+  }
+  .formContainer{
+    margin-top: 0px; 
+  }
+  .headerContainer {
+    width: 90%; 
+    margin-left: auto;
+    margin-right: auto; 
+  }
+  .headerContainer h1 {
+    font-size: medium;
+  }
+}
+/* portrait phones */
 
-/* phones */
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
   html {
     height: 120vh;
   }
@@ -247,6 +281,25 @@ html {
     padding: 1em;
   }
   .headerContainer h1 {
-    font-size: larger;
+    font-size: medium;
+    
+  }
+}
+
+/* smaller phone screens  */
+
+@media screen and (max-width: 450px) {
+  .formContainer{
+    width: 110%; 
+  }
+  .headerContainer{
+    width: 110%;
+    margin-top: 15px; 
+  }
+  .headerContainer h1 {
+    font-size: smaller;
+  }
+  .headerContainer i {
+    padding: 0px 8px; 
   }
 }
